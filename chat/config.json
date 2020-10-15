@@ -1,0 +1,20 @@
+{
+    "nombre": "chat",
+    "serverSocket": {
+        "puerto": 11002,
+        "ip": "192.168.0.1"
+    },
+    "data_base": {
+        "puerto": 5432,
+        "pass": "postgres",
+        "ip": "192.168.0.110",
+        "bd_name": "servisofts.motonet",
+        "user": "postgres"
+    },
+    "servicios": {
+        "usuario": {
+            "puerto": 11002,
+            "ip": "192.168.0.1"
+        }
+    }
+}
