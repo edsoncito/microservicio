@@ -1,0 +1,16 @@
+FROM centos:7
+
+RUN mkdir /u01
+
+RUN chmod 777 /u01
+
+WORKDIR /u01
+
+ADD ./config.json /u01/
+ADD ./chat.jar /u01/
+
+RUN yum update
+
+RUN yum install -y java-11-openjdk-devel
+
+
