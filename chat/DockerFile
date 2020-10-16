@@ -14,3 +14,5 @@ RUN yum update
 RUN yum install -y java-11-openjdk-devel
 
 
+#  docker build  -f ./DockerFile --tag mircroservicio.chat .               
+# docker run --interactive --publish 12002:12002 mircroservicio.chat:latest

@@ -55,9 +55,10 @@ public class ServerHttp {
             if (type != null) {
                 response.put("type", type);
                 String datastr = parametros.get("data");
-                datastr = new String(Base64.getDecoder().decode(datastr));
 
                 if (datastr != null) {
+                    datastr = new String(Base64.getDecoder().decode(datastr));
+
                     JSONObject data = new JSONObject(datastr);
                     response.put("data", data);
                 }
