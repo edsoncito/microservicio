@@ -1,8 +1,12 @@
 {
-    "nombre": "Usuario",
+    "nombre": "usuario",
     "serverSocket": {
         "ip": "192.168.0.1",
         "puerto": 11001
+    },
+    "httpServer": {
+        "puerto": 12001,
+        "ip": "192.168.0.1"
     },
     "data_base": {
         "puerto": 5432,
@@ -14,7 +18,7 @@
     "servicios": {
         "chat": {
             "ip": "192.168.0.1",
-            "puerto": 11001
+            "puerto": 11002
         }
     }
 }

@@ -22,6 +22,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import Config.Config;
+import Manejador.Manejador;
 import util.console;
 
 public class Session extends Thread {
@@ -111,18 +112,8 @@ public class Session extends Thread {
                         JSONObject data = new JSONObject(line);
                         data.put("id", id);
                         data.put("noSend", false);
-                        if (servicio != null) {
-                            data.put("servicio", servicio);
-                        }
-                        /*
-                         * Router router = new Router(Router.TIPO_TCPS, this); new Manejador(data,
-                         * router);
-                         */
-
+                        data = Manejador.start(data);
                         if (!data.getBoolean("noSend")) {
-                            if (data.has("servicio")) {
-                                data.remove("servicio");
-                            }
                             send(data.toString());
                         }
                     }

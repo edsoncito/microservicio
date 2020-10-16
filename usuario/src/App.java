@@ -1,12 +1,23 @@
 import Config.Config;
+import ServerHttp.ServerHttp;
+import SocketServer.SocketServer;
 import util.console;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        console.error("Iniciando server Taller de Software");
+        console.error("Iniciando server taller de software");
         if (!Config.validate()) {
             console.error("Server closed.");
             return;
-        }
+        }      
+
+        SocketServer.Start(Config.getJSON("serverSocket").getInt("puerto"));
+        ServerHttp.Start(Config.getJSON("httpServer").getInt("puerto"));
+        
+            // System.out.println(SSL.getPem(SSL.getCert(Config.getJSON().getString("nombre"))));
+            // SocketCliete.enableReconect(true);
+            // SocketCliete.Start(Config.getJSON("socket_client").getJSONObject("servicio"));
+            // Conexion.setConexion(Config.getJSON("data_base")); 
+        
     }
 }

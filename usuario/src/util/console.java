@@ -1,5 +1,6 @@
 package util;
 
+import org.w3c.dom.Text;
 
 public class console {
     public static final String ANSI_BLACK = "\u001B[30m";
