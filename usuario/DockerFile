@@ -1,0 +1,18 @@
+FROM centos:7
+
+RUN mkdir /u01
+
+RUN chmod 777 /u01
+
+WORKDIR /u01
+
+ADD ./config.json /u01/
+ADD ./Usuario.json /u01/
+ADD ./usuario.jar /u01/
+
+RUN yum update
+
+RUN yum install -y java-11-openjdk-devel
+
+# docker build  -f ./DockerFile --tag mircroservicio.usuario .               
+# docker run --interactive --publish 11001:11001 --publish 12001:12001 mircroservicio.usuario:latest
