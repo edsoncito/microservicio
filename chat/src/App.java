@@ -1,4 +1,5 @@
 import Config.Config;
+import ServerHttp.ServerHttp;
 import SocketServer.SocketServer;
 import util.console;
 
@@ -11,9 +12,12 @@ public class App {
         }      
 
         SocketServer.Start(Config.getJSON("serverSocket").getInt("puerto"));
-        /* System.out.println(SSL.getPem(SSL.getCert(Config.getJSON().getString("nombre"))));
-        SocketCliete.enableReconect(true);
-        SocketCliete.Start(Config.getJSON("socket_client").getJSONObject("servicio"));
-        Conexion.setConexion(Config.getJSON("data_base")); */
+        ServerHttp.Start(Config.getJSON("httpServer").getInt("puerto"));
+        
+            // System.out.println(SSL.getPem(SSL.getCert(Config.getJSON().getString("nombre"))));
+            // SocketCliete.enableReconect(true);
+            // SocketCliete.Start(Config.getJSON("socket_client").getJSONObject("servicio"));
+            // Conexion.setConexion(Config.getJSON("data_base")); 
+        
     }
 }

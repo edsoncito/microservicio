@@ -4,6 +4,10 @@
         "puerto": 11002,
         "ip": "192.168.0.1"
     },
+    "httpServer": {
+        "puerto": 12002,
+        "ip": "192.168.0.1"
+    },
     "data_base": {
         "puerto": 5432,
         "pass": "postgres",
