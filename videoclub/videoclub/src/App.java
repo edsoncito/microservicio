@@ -16,9 +16,10 @@ import Utils.Utils;
 public class App {
     public static void main(String[] args) throws Exception {
         // SOCIOS
-        Socio socio1 = new Socio("Ricky", "Paz", "B/ convifag norte", "75395848");
-        Socio socio2 = new Socio("Edson", "Cito", "B/ norte", "tt821212");
-        Socio socio3 = new Socio("Xavier", "Florez", "B/ norte", "tt821212212");
+        Socio socio1 = new Socio("Nahim", "Caseres", "B/ Colorada", "75395848");
+        Socio socio2 = new Socio("Ricky", "Paz", "B/ convifag norte", "75395848");
+        Socio socio3 = new Socio("Edson", "Cito", "B/ norte", "tt821212");
+        Socio socio4 = new Socio("Xavier", "Florez", "B/ norte", "tt821212212");
         // Console.log(Console.ANSI_BLUE, Socio.DATAtoString());
         // ACTORES
         Actor actor1 = new Actor("Leonardo", "Dicaprio");
